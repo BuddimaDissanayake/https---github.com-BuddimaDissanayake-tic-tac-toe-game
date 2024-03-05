@@ -1,0 +1,33 @@
+.square{
+    background-color:#339CDC;
+    height: 100px;
+    width: 100px;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square:hover{
+    scale:0.95;
+    border-radius: 10px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.image{
+    height: 40px;
+    width: 40px;
+}
