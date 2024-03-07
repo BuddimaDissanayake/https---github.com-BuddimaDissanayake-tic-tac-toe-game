@@ -16,14 +16,16 @@ const users = [
 
 const Game = () => {
     const [grid, setGrid] = useState(Array(9).fill(null));
-    const [selectedUser, setSelectedUser] = useState({});
+    const [selectedUser, setSelectedUser] = useState('');
 
     const pressSquare = (index) => {
-        setGrid((prevState) => {
-          prevState[index] = selectedUser.id == 1 ? "x" : "o";
-          setSelectedUser(users[selectedUser.id == 1 ? 0 : 1]);
-          return [...prevState];
-        });
+        if(grid[index] == null){
+            setGrid((prevState) => {
+                prevState[index] = selectedUser.id === 1 ? "x" : "o";
+                setSelectedUser(users[selectedUser.id === 1 ? 0 : 1]);
+                return [...prevState];
+              });
+        }
       };
     
       const changeUser = () => {
@@ -46,6 +48,7 @@ const Game = () => {
 
     return(
         <div className="container">
+            <p className="topic">Tic Tac Toe</p>
             <Players users={users} selectedUser={selectedUser}/>
             <div className="board">
                 {grid.map((item,index) => (<Square 
@@ -54,7 +57,7 @@ const Game = () => {
                 value={item}
                 pressSquare={() => pressSquare(index)}/>))}
             </div>
-            <button className="restart" onClick={resetGame}>RESTART</button>
+            <button className="resetbtn" onClick={resetGame}>RESTART</button>
         </div>
     );
 }

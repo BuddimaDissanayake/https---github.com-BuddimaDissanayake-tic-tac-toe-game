@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #b6d7ee;
+}
+
+.play-btn{
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    background-color: #5fb2ea;
+    color: #044dc2;
+    font-size:15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    transform: scale(1.04);
+}
