@@ -1,87 +1,91 @@
-.square{
-    background-color:#339CDC;
-    height: 100px;
-    width: 100px;
-    margin: 2px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.square {
+  background-color: #339cdc;
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.square:hover{
-    scale:0.95;
-    border-radius: 10px;
+.square:hover {
+  scale: 0.95;
+  border-radius: 10px;
 }
 
-.board{
-    display: grid;
-    grid-template-columns: auto auto auto;
+.board {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background-color: #b6d7ee;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #b6d7ee;
 }
 
-.image{
-    height: 40px;
-    width: 40px;
+.image {
+  height: 40px;
+  width: 40px;
 }
 
 .resetbtn {
-    margin: 10px;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 15px;
-    background-color: #5fb2ea;
-    color: #044dc2;
-    font-size:15px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 15px;
+  background-color: #5fb2ea;
+  color: #044dc2;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
 }
 
 .resetbtn:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .user-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 120px;
 }
 
 .user {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 30px;
 }
 
 .select-user {
-    background-color: #6ebef4;
+  background-color: #6ebef4;
 }
 
 .user-name {
-    font-size: 18px;
-    color: #135ed7;
-    font-weight: 500px;
-    padding: 8px;
+  font-size: 18px;
+  color: #135ed7;
+  font-weight: 500px;
+  padding: 8px;
 }
 
 .topic {
-    font-size: 50px;
-    margin-bottom: 2px ;
+  font-size: 50px;
+  margin-bottom: 2px;
+}
+
+.sign {
+  height: 20px;
 }

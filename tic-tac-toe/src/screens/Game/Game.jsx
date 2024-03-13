@@ -8,6 +8,7 @@ const Game = () => {
   const [grid, setGrid] = useState(Array(9).fill(null));
   const [selectedUser, setSelectedUser] = useState("");
   const [isWinner, setIsWinner] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
   let winner = "";
 
   const location = useLocation();
@@ -16,10 +17,12 @@ const Game = () => {
   const users = [
     {
       id: 0,
+      sign: "https://cdn-icons-png.flaticon.com/512/2976/2976286.png",
       name: queryParams.get("data1"),
     },
     {
       id: 1,
+      sign: "https://cdn-icons-png.flaticon.com/512/3524/3524377.png",
       name: queryParams.get("data2"),
     },
   ];
@@ -48,7 +51,7 @@ const Game = () => {
   const pressSquare = (index) => {
     
     
-
+setClickCount(clickCount+1);
     
     
     if (grid[index] == null) {
@@ -90,6 +93,7 @@ const Game = () => {
     <div className="container">
       <p className="topic">Tic Tac Toe</p>
       <Players users={users} selectedUser={selectedUser} />
+      {isWinner === (false) && clickCount === 9 && <h1>Drawn!</h1> }
       {isWinner ? (
         <div className="winMessage">
           {/* <h1>Player {selectedUser.name} Wins!</h1> */}
