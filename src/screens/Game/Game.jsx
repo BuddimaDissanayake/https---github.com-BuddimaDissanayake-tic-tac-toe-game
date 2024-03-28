@@ -42,18 +42,18 @@ const Game = () => {
     for (let i = 0; i < winningConditions.length; i++) {
       const [a, b, c] = winningConditions[i];
       if (grid[a] === grid[b] && grid[b] === grid[c]) {
-        console.log(grid[a]);
+        // console.log(grid[a]);
+        // const gridValue = grid[a];
+        // console.log(gridValue);
         return grid[a];
       }
     }
   };
 
+
   const pressSquare = (index) => {
-    
-    
-setClickCount(clickCount+1);
-    
-    
+    setClickCount(clickCount + 1);
+
     if (grid[index] == null) {
       setGrid((prevState) => {
         prevState[index] = selectedUser.id === 1 ? "o" : "x";
@@ -83,6 +83,8 @@ setClickCount(clickCount+1);
     setGrid(Array(9).fill(null));
     setIsWinner(false);
     changeUser();
+    setClickCount(0);
+    console.log(clickCount);
   };
 
   useEffect(() => {
@@ -92,8 +94,8 @@ setClickCount(clickCount+1);
   return (
     <div className="container">
       <p className="topic">Tic Tac Toe</p>
-      <Players users={users} selectedUser={selectedUser} />
-      {isWinner === (false) && clickCount === 9 && <h1>Drawn!</h1> }
+      <Players users={users} selectedUser={selectedUser}/>
+      {isWinner === false && clickCount === 9 && <h1>Drawn!</h1>}
       {isWinner ? (
         <div className="winMessage">
           {/* <h1>Player {selectedUser.name} Wins!</h1> */}

@@ -9,6 +9,7 @@ const Players = ({ users, selectedUser, Image }) => {
             className={`user ${
               selectedUser.id === user.id ? "select-user" : ""
             }`}
+            key={users.id}
           >
             <img className="sign" src={user.sign} alt="sign" />
             <p className="user-name">{user.name}</p>
